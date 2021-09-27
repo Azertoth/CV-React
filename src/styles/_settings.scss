@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Patrick+Hand&family=Permanent+Marker&display=swap');
+
+$font-1: 'Permanent Marker', cursive;
+$font-2: 'Josefin Sans', sans-serif;
+$font-3: 'Patrick Hand', cursive;
+
+$color-1: #404452; //#2A1D52
+$color-2: #404452;
+$color-3: rgb(158, 238, 127);//rgb(99, 164, 233)
+$color-4: #ff0101;//#4FEDD2
+$color-5: rgb(113, 194, 194);//#36D0EA
+$white: #ddd;
+$black: #333;
+
+$borderRadius: 25px;
+$shadow: 0 1px 3px $black;
+$minHeight: 95vh;
+
+@mixin  verticalCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    margin: 1rem auto;
+    max-width: 1200px;
+    font-family: $font-3;
+    color: $black;
+    font-size: 1.5rem;
+}
+button {
+    cursor: pointer;
+}
+li {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+}
+a:visited {
+    color: $black;
+}
+.home, .knowledges, .portfolio, .contact {
+    display: flex;
+
+    @media screen and (max-width:850px){
+        display: block !important;
+    }
+}
+.homeContent, .knowledgesContent, .contactContent, .portfolioContent {
+    margin-left: .4rem;
+
+    @media screen and (max-width:850px){
+        margin-left: 0 !important;
+    }
+}
